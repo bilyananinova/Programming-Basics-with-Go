@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	var budget, price float32
+	var budget, price float64
 	var season, accommodation, location string
 
 	fmt.Scan(&budget, &season)
@@ -43,3 +43,4 @@ func main() {
 
 	fmt.Printf("%s - %s - %.2f", location, accommodation, price)
 }
+

@@ -5,7 +5,7 @@ import "fmt"
 func main() {
 	var season, group, sport string
 	var students, nights int
-	var pricePerNight, price float32
+	var pricePerNight, price float64
 
 	fmt.Scan(&season, &group, &students, &nights)
 
@@ -54,15 +54,16 @@ func main() {
 		}
 	}
 
-	price = (pricePerNight * float32(nights)) * float32(students)
+	price = pricePerNight * float64(nights) * float64(students)
 
 	if students >= 50 {
 		price *= 0.50
-	} else if students < 50 && students >= 20 {
+	} else if students >= 20 {
 		price *= 0.85
-	} else if students < 20 && students >= 10 {
+	} else if students >= 10 {
 		price *= 0.95
 	}
 
 	fmt.Printf("%s %.2f lv.", sport, price)
 }
+
